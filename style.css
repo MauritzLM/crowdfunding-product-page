@@ -7,11 +7,26 @@ html {
     font-size: 10px;
 }
 
-.attribution {
-    font-size: 11px;
-    text-align: center;
+body {
+    margin: 0;
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+header {
+    background-image: url('./images/image-hero-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 280px;
+}
+
+nav {
+    float: right;
+}
+
+nav button {
+    background: none;
+    border: none;
+}
+
+ul {
+    list-style: none;
 }
