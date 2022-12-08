@@ -9,6 +9,7 @@ html {
 
 body {
     margin: 0;
+    font-size: 1.6rem;
 }
 
 header {
@@ -19,6 +20,7 @@ header {
     position: relative;
 }
 
+/* navigation menu */
 nav {
     float: right;
 }
@@ -41,4 +43,8 @@ nav button {
 
 .not-visible {
     visibility: collapse;
+}
+
+.selected {
+    border: 2px solid hsl(176, 72%, 28%);
 }
