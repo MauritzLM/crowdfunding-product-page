@@ -20,7 +20,9 @@ closeMenu.addEventListener('click', () => {
 
 // pledge selection
 const radioButtons = document.querySelectorAll("input[type='radio']");
-const fieldsets = document.querySelectorAll('fieldset');
+const fieldsets = document.querySelectorAll("fieldset");
+const fieldsetDiv = document.querySelectorAll("fieldset div");
+const pledgeAmount = document.querySelectorAll(".pledge-amount");
 
 for (let i = 0; i < radioButtons.length; i++) {
     // add event listener to all radio buttons
@@ -30,9 +32,25 @@ for (let i = 0; i < radioButtons.length; i++) {
             // if checked change styles
             if (radioButtons[j].checked) {
                 fieldsets[j].className = "selected";
+                fieldsetDiv[j].className = "";
+                // toggle bold class on pledge amount info
+                // correct logic but need to find a better way to write this
+                if (j === 1) {
+                    pledgeAmount[0].className = "pledge-amount bold";
+                    pledgeAmount[1].className = "pledge-amount";
+                } else if (j === 2) {
+                    pledgeAmount[0].className = "pledge-amount";
+                    pledgeAmount[1].className = "pledge-amount bold";
+
+                } else {
+                    pledgeAmount[0].className = "pledge-amount";
+                    pledgeAmount[1].className = "pledge-amount";
+                }
+
             }
             else {
                 fieldsets[j].className = "";
+                fieldsetDiv[j].className = "not-visible";
             }
         }
 
