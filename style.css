@@ -16,6 +16,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     height: 280px;
+    position: relative;
 }
 
 nav {
@@ -27,6 +28,17 @@ nav button {
     border: none;
 }
 
-ul {
+.dropdown-menu {
     list-style: none;
+    position: absolute;
+    top: 2em;
+    right: 5em;
+}
+
+.close-menu {
+    display: none;
+}
+
+.not-visible {
+    visibility: collapse;
 }
