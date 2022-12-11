@@ -5,11 +5,13 @@
 html {
     font-family: 'Commissioner', sans-serif;
     font-size: 10px;
+    height: 100vh;
 }
 
 body {
     margin: 0;
     font-size: 1.6rem;
+    height: 100%;
 }
 
 header {
@@ -52,4 +54,58 @@ nav button {
 
 .bold {
     font-weight: bold;
+}
+
+main {
+    padding: 2em;
+}
+
+/* progress bar */
+.progress-bar {
+    background-color: hsl(0, 7%, 86%);
+    width: 80%;
+    height: 15px;
+    border-radius: 20px;
+}
+
+/* set width with js */
+.progress-bar div {
+    width: 40%;
+    height: 100%;
+    background-color: hsl(176, 50%, 47%);
+    border-radius: 20px;
+}
+
+.close-modal-btn {
+    float: right;
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+}
+
+.modal-thankyou {
+    z-index: 999;
+    padding: 2em;
+}
+
+.modal-container,
+.success-modal-container {
+    background-color: hsla(0, 2%, 33%, 0.473);
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    display: none;
+    padding: 2em;
+    height: 192%;
+}
+
+/* .success-modal-container {
+    display: block;
+} */
+
+.selection-modal {
+    background-color: hsl(0, 0%, 100%);
+    padding: 2em;
 }

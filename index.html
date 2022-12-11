@@ -20,6 +20,7 @@
 <body>
   <header>
     <img src="./images/logo.svg" alt="">
+
     <nav>
       <button class="menu-icon"><img src="./images/icon-hamburger.svg" alt=""></button>
       <button class="close-menu"><img src="./images/icon-close-menu.svg" alt=""></button>
@@ -59,9 +60,13 @@
         <p>56</p>
         <p>days left</p>
       </div>
+
+      <div class="progress-bar">
+        <div></div>
+      </div>
     </section>
 
-    <section>
+    <section class="about">
       <h2>About this project</h2>
 
       <p>The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen
@@ -77,7 +82,7 @@
         <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
           you’ll be added to a special Backer member list.</p>
         <p><span>101</span> left</p>
-        <button>Select Reward</button>
+        <button class="select-pledge-btn">Select Reward</button>
       </section>
 
       <section>
@@ -86,7 +91,7 @@
         <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
           member list. Shipping is included.</p>
         <p><span>64</span>left</p>
-        <button>Select Reward</button>
+        <button class="select-pledge-btn">Select Reward</button>
       </section>
 
       <section>
@@ -95,7 +100,7 @@
         <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
           to our Backer member list. Shipping is included.</p>
         <p><span>0</span>left</p>
-        <button>Out of Stock</button>
+        <button disabled>Out of Stock</button>
       </section>
     </section>
   </main>
@@ -103,6 +108,7 @@
   <!-- Selection modal start -->
   <div class="modal-container">
     <section class="selection-modal">
+      <button class="close-modal-btn"><img src="./images/icon-close-modal.svg" alt=""></button>
       <h2>Back this project</h2>
       <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
 
@@ -189,10 +195,12 @@
       </form>
 
     </section>
-    <!-- Selection modal end -->
+  </div>
+  <!-- Selection modal end -->
 
 
-    <!-- Success modal start -->
+  <!-- Success modal start -->
+  <div class="success-modal-container">
     <section class="modal-thankyou">
       <img src="" alt="">
       <h2>Thanks for your support!</h2>
@@ -200,8 +208,9 @@
         an email once our campaign is completed.</p>
       <button>Got it!</button>
     </section>
-    <!-- Success modal end -->
   </div>
+  <!-- Success modal end -->
+
 </body>
 
 </html>

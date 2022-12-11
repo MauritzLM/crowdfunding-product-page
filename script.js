@@ -56,3 +56,20 @@ for (let i = 0; i < radioButtons.length; i++) {
 
     })
 }
+
+// modal popup
+const selectRewardButtons = document.querySelectorAll('.select-pledge-btn');
+const selectionModal = document.querySelector('.modal-container');
+const closeModalBtn = document.querySelector('.close-modal-btn');
+
+for (let button of selectRewardButtons) {
+    button.addEventListener('click', (e) => {
+        selectionModal.style.display = 'block';
+
+    });
+};
+
+
+closeModalBtn.addEventListener('click', () => {
+    selectionModal.style.display = 'none';
+});
