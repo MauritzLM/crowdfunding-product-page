@@ -73,3 +73,33 @@ for (let button of selectRewardButtons) {
 closeModalBtn.addEventListener('click', () => {
     selectionModal.style.display = 'none';
 });
+
+// progress bar
+const progressBar = document.querySelector('.progress-bar div');
+const currentAmount = document.querySelector('.current-amount');
+const targetAmount = document.querySelector('.target-amount');
+
+
+
+const displayProgressBar = () => {
+    let current = getNumber(currentAmount.textContent);
+    let target = getNumber(targetAmount.textContent);
+
+    console.log(current, target);
+
+    progressBar.style.width = `${(current / target) * 100}%`;
+
+}
+
+// function to get number from string
+const getNumber = (str) => {
+    const regex = /[\d]/g;
+    let numArr = str.match(regex);
+    let num = numArr.join('');
+
+    return Number(num);
+}
+
+displayProgressBar();
+
+
