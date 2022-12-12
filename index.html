@@ -112,7 +112,7 @@
       <h2>Back this project</h2>
       <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
 
-      <form action="">
+      <form action="#">
         <fieldset>
           <label for="no-reward">
             <input type="radio" name="pledge" id="no-reward">
@@ -125,7 +125,7 @@
           <div class="not-visible">
             <label for="0">Enter your pledge
               <span>$0</span> <input type="number" name="amount" id="0"> </label>
-            <button>Continue</button>
+            <button type="submit">Continue</button>
           </div>
         </fieldset>
 
@@ -143,8 +143,8 @@
           <!-- Selected pledge start -->
           <div class="not-visible">
             <label for="25">Enter your pledge
-              <span>$25</span> <input type="number" name="amount" id="25"> </label>
-            <button>Continue</button>
+              <span>$25</span> <input type="number" name="amount" id="25" min="25" max="74" value="25"> </label>
+            <button type="submit">Continue</button>
           </div>
           <!-- Selected pledge end -->
         </fieldset>
@@ -164,8 +164,8 @@
           <!-- Selected pledge start -->
           <div class="not-visible">
             <label for="75"> Enter your pledge
-              <span>$75</span> <input type="number" name="amount" id="75"> </label>
-            <button>Continue</button>
+              <span>$75</span> <input type="number" name="amount" id="75" min="75" max="199" value="75"> </label>
+            <button type="submit">Continue</button>
           </div>
           <!-- Selected pledge end -->
         </fieldset>
@@ -182,7 +182,7 @@
           <p>0 left</p>
 
           <!-- Selected pledge  start -->
-          <div class="not-visible">
+          <div class="">
             <label for="200">
               Enter your pledge <span>$200</span>
               <input type="number" name="amount" id="200">

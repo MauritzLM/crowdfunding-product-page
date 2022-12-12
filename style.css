@@ -63,7 +63,7 @@ main {
 /* progress bar */
 .progress-bar {
     background-color: hsl(0, 7%, 86%);
-    width: 80%;
+    width: 90%;
     height: 15px;
     border-radius: 20px;
 }

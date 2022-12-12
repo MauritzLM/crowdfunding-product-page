@@ -69,26 +69,22 @@ for (let button of selectRewardButtons) {
     });
 };
 
-
 closeModalBtn.addEventListener('click', () => {
     selectionModal.style.display = 'none';
 });
 
 // progress bar
+
 const progressBar = document.querySelector('.progress-bar div');
 const currentAmount = document.querySelector('.current-amount');
 const targetAmount = document.querySelector('.target-amount');
 
-
-
 const displayProgressBar = () => {
+
     let current = getNumber(currentAmount.textContent);
     let target = getNumber(targetAmount.textContent);
 
-    console.log(current, target);
-
     progressBar.style.width = `${(current / target) * 100}%`;
-
 }
 
 // function to get number from string
@@ -101,5 +97,28 @@ const getNumber = (str) => {
 }
 
 displayProgressBar();
+
+
+// pledge submission
+// need: number input, submit button, current backed amount, pledge selection modal, thankyou modal
+const form = document.querySelector('form');
+const numberInputs = document.querySelectorAll('.not-visible input[type="number"]');
+
+form.addEventListener('submit', (e) => {
+    for (let i = 0; i < radioButtons.length; i++) {
+        if (radioButtons[i].checked) {
+            let newAmount = Number(numberInputs[i].value) + getNumber(currentAmount.textContent);
+            currentAmount.textContent = `$${newAmount}`; // need to add comma/ decimal
+        }
+    }
+    // update total backers
+
+    // display thank you modal
+
+    selectionModal.style.display = 'none';
+    e.preventDefault();
+
+})
+
 
 
