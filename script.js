@@ -18,6 +18,28 @@ closeMenu.addEventListener('click', () => {
 });
 
 
+//bookmark
+const bookmarkDiv = document.querySelector('.bookmark');
+const bookmarkIcon = document.querySelector('.bookmark img');
+const bookmarkText = document.querySelector('.bookmark span');
+
+bookmarkDiv.addEventListener('click', () => {
+    // change text
+
+    if (bookmarkText.textContent === 'bookmark') {
+        bookmarkText.textContent = 'bookmarked';
+        // text color
+        // img source ./images/icon-bookmark-checked.svg
+        bookmarkIcon.src = './images/icon-bookmark-checked.svg';
+    } else {
+        bookmarkText.textContent = 'bookmark'
+        // text color
+        // img source ./images/icon-bookmark.svg
+        bookmarkIcon.src = './images/icon-bookmark.svg';
+    }
+
+})
+
 // pledge selection
 const radioButtons = document.querySelectorAll("input[type='radio']");
 const fieldsets = document.querySelectorAll("fieldset");
@@ -100,25 +122,43 @@ displayProgressBar();
 
 
 // pledge submission
-// need: number input, submit button, current backed amount, pledge selection modal, thankyou modal
 const form = document.querySelector('form');
 const numberInputs = document.querySelectorAll('.not-visible input[type="number"]');
+const totalBackers = document.querySelector('.total-backers');
+const successModal = document.querySelector('.success-modal-container');
+const successModalButton = document.querySelector('.success-modal-container button');
 
 form.addEventListener('submit', (e) => {
     for (let i = 0; i < radioButtons.length; i++) {
         if (radioButtons[i].checked) {
+            // calculate the new backed amount
             let newAmount = Number(numberInputs[i].value) + getNumber(currentAmount.textContent);
-            currentAmount.textContent = `$${newAmount}`; // need to add comma/ decimal
+
+            // if target hit??
+
+            // create correct format
+            let newAmountStr = newAmount.toString();
+            let newAmountStart = newAmountStr.slice(0, 2);
+            let newAmountEnd = newAmountStr.slice(2);
+            currentAmount.textContent = `$${newAmountStart},${newAmountEnd}`;
+
+            // update number of backers
+            totalBackers.textContent = `${getNumber(totalBackers.textContent) + 1}`
         }
     }
-    // update total backers
 
     // display thank you modal
 
     selectionModal.style.display = 'none';
+    successModal.style.display = 'block';
+    displayProgressBar();
     e.preventDefault();
+});
 
-})
+// remove thank you modal
+successModalButton.addEventListener('click', () => {
+    successModal.style.display = 'none';
+});
 
 
 
