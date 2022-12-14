@@ -14,29 +14,69 @@ body {
     height: 100%;
 }
 
+/* Typography */
+a {
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+}
+
 header {
     background-image: url('./images/image-hero-mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 280px;
+    height: 300px;
     position: relative;
+    padding: 0 1em;
+    z-index: 1;
 }
 
 /* navigation menu */
-nav {
-    float: right;
+.nav-modal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200vh;
+    background-color: hsla(0, 0%, 0%, 0.473);
+    z-index: -1;
+    display: none;
 }
 
-nav button {
+nav {
+    z-index: 1;
+    position: relative;
+    top: 1.9em;
+}
+
+header button {
     background: none;
     border: none;
+    float: right;
 }
 
 .dropdown-menu {
     list-style: none;
     position: absolute;
-    top: 2em;
-    right: 5em;
+    top: 2.54em;
+    right: .4em;
+    background-color: hsl(0, 0%, 100%);
+    padding-left: 0;
+    border-radius: 10px;
+    width: 95%;
+    /* height: 175px; */
+}
+
+.dropdown-menu li {
+    padding: 1.45em 1.2em;
+    font-weight: 500;
+    font-size: 1.7rem;
+}
+
+.dropdown-menu li:first-child,
+.dropdown-menu li:nth-child(2) {
+    border-bottom: 1px solid hsla(0, 0%, 48%, 0.233);
 }
 
 .close-menu {
@@ -88,7 +128,7 @@ main {
 
 .modal-container,
 .success-modal-container {
-    background-color: hsla(0, 2%, 33%, 0.473);
+    background-color: hsla(0, 0%, 0%, 0.473);
     position: absolute;
     right: 0;
     top: 0;
@@ -97,7 +137,7 @@ main {
     z-index: 999;
     display: none;
     padding: 2em;
-    height: 192%;
+    height: 200vh;
 }
 
 /* .success-modal-container {

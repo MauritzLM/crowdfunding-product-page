@@ -2,12 +2,14 @@
 const menuIcon = document.querySelector(".menu-icon");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 const closeMenu = document.querySelector(".close-menu");
+const navModal = document.querySelector(".nav-modal");
 
 // open menu
 menuIcon.addEventListener('click', () => {
     dropdownMenu.classList.toggle("not-visible");
     closeMenu.style.display = "block";
     menuIcon.style.display = "none";
+    navModal.style.display = "block";
 });
 
 //close menu
@@ -15,6 +17,7 @@ closeMenu.addEventListener('click', () => {
     dropdownMenu.classList.toggle("not-visible");
     closeMenu.style.display = "none";
     menuIcon.style.display = "block";
+    navModal.style.display = "none";
 });
 
 
