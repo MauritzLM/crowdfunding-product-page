@@ -126,7 +126,7 @@ displayProgressBar();
 
 // pledge submission
 const form = document.querySelector('form');
-const numberInputs = document.querySelectorAll('.not-visible input[type="number"]');
+const numberInputs = document.querySelectorAll('input[type="number"]');
 const totalBackers = document.querySelector('.total-backers');
 const successModal = document.querySelector('.success-modal-container');
 const successModalButton = document.querySelector('.success-modal-container button');

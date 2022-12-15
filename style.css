@@ -211,8 +211,22 @@ fieldset {
 
 /* form inputs */
 
-input[type="radio"] {
+input {
     appearance: none;
+}
+
+input[type="number"] {
+    appearance: textfield;
+    padding: .7em .5em .7em .5em;
+    border-radius: 20px;
+    width: 32%;
+    border: 1px solid hsla(0, 0%, 48%, 0.233);
+    text-align: center;
+    font: inherit;
+    font-weight: 500;
+}
+
+input[type="radio"] {
     font: inherit;
     color: hsl(176, 50%, 47%);
     width: 24px;
