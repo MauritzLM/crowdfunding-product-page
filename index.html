@@ -116,79 +116,92 @@
 
       <form action="#">
         <fieldset>
-          <label for="no-reward">
-            <input type="radio" name="pledge" id="no-reward">
-            Pledge with no reward
-          </label>
-
-          <p>Choose to support us without a reward if you simply believe in our project. As a backer,
-            you will be signed up to receive product updates via email.</p>
-
-          <div class="not-visible">
+          <div class="pledge-info">
+            <div>
+              <input type="radio" name="pledge" id="no-reward">
+              <label class="bold" for="no-reward">
+                Pledge with no reward
+              </label>
+            </div>
+            <p>Choose to support us without a reward if you simply believe in our project. As a backer,
+              you will be signed up to receive product updates via email.</p>
+          </div>
+          <div class="select-amount not-visible">
             <label for="0">Enter your pledge
-              <span>$0</span> <input type="number" name="amount" id="0"> </label>
+              <span>$</span> </label>
+            <input type="number" name="amount" id="0">
             <button type="submit">Continue</button>
           </div>
         </fieldset>
 
 
         <fieldset>
-          <label for="bamboo">
-            <input type="radio" name="pledge" id="bamboo">
-            Bamboo Stand
-            <span class="pledge-amount">Pledge $25 or more</span>
-          </label>
-          <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-            you’ll be added to a special Backer member list.</p>
-          <p><span>101</span>left</p>
+          <div class="pledge-info">
+            <div>
+              <input type="radio" name="pledge" id="bamboo">
+              <label class="bold" for="bamboo">
+                Bamboo Stand <br>
+                <span class="pledge-amount">Pledge $25 or more</span>
+              </label>
+            </div>
+            <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+              you’ll be added to a special Backer member list.</p>
+            <p><span>101</span>left</p>
+          </div>
 
           <!-- Selected pledge start -->
-          <div class="not-visible">
+          <div class="select-amount not-visible">
             <label for="25">Enter your pledge
-              <span>$25</span> <input type="number" name="amount" id="25" min="25" max="74" value="25"> </label>
+              <span>$</span> </label>
+            <input type="number" name="amount" id="25" min="25" max="74" value="25">
             <button type="submit">Continue</button>
           </div>
           <!-- Selected pledge end -->
         </fieldset>
 
         <fieldset>
-          <label for="black-edition">
-            <input type="radio" name="pledge" id="black-edition">
-            Black Edition Stand
-            <span class="pledge-amount">Pledge $75 or more</span>
-          </label>
-
-
-          <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-            member list. Shipping is included.</p>
-          <p><span>64</span> left</p>
-
+          <div class="pledge-info">
+            <div>
+              <input type="radio" name="pledge" id="black-edition">
+              <label class="bold" for="black-edition">
+                Black Edition Stand <br>
+                <span class="pledge-amount">Pledge $75 or more</span>
+              </label>
+            </div>
+            <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+              member list. Shipping is included.</p>
+            <p><span>64</span> left</p>
+          </div>
           <!-- Selected pledge start -->
-          <div class="not-visible">
+          <div class="select-amount not-visible">
             <label for="75"> Enter your pledge
-              <span>$75</span> <input type="number" name="amount" id="75" min="75" max="199" value="75"> </label>
+              <span>$</span> </label>
+            <input type="number" name="amount" id="75" min="75" max="199" value="75">
             <button type="submit">Continue</button>
           </div>
           <!-- Selected pledge end -->
         </fieldset>
 
         <fieldset disabled>
-          <label for="special-edition">
-            <input type="radio" name="pledge" id="special-edition">
-            Mahogany Special Edition
-            <span>Pledge $200 or more</span>
-          </label>
+          <div class="pledge-info">
+            <div>
+              <input type="radio" name="pledge" id="special-edition">
+              <label for="special-edition">
+                Mahogany Special Edition <br>
+                <span>Pledge $200 or more</span>
+              </label>
+            </div>
 
-          <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-            to our Backer member list. Shipping is included.</p>
-          <p>0 left</p>
-
+            <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+              to our Backer member list. Shipping is included.</p>
+            <p>0 left</p>
+          </div>
           <!-- Selected pledge  start -->
-          <div class="">
+          <div class="select-amount not-visible">
             <label for="200">
               Enter your pledge <span>$200</span>
-              <input type="number" name="amount" id="200">
             </label>
+            <input type="number" name="amount" id="200">
 
             <button>Continue</button>
           </div>

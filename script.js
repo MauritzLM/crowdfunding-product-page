@@ -46,7 +46,7 @@ bookmarkDiv.addEventListener('click', () => {
 // pledge selection
 const radioButtons = document.querySelectorAll("input[type='radio']");
 const fieldsets = document.querySelectorAll("fieldset");
-const fieldsetDiv = document.querySelectorAll("fieldset div");
+const fieldsetDiv = document.querySelectorAll(".select-amount");
 const pledgeAmount = document.querySelectorAll(".pledge-amount");
 
 for (let i = 0; i < radioButtons.length; i++) {
@@ -57,7 +57,7 @@ for (let i = 0; i < radioButtons.length; i++) {
             // if checked change styles
             if (radioButtons[j].checked) {
                 fieldsets[j].className = "selected";
-                fieldsetDiv[j].className = "";
+                fieldsetDiv[j].className = "select-amount";
                 // toggle bold class on pledge amount info
                 // correct logic but need to find a better way to write this
                 if (j === 1) {
@@ -75,7 +75,7 @@ for (let i = 0; i < radioButtons.length; i++) {
             }
             else {
                 fieldsets[j].className = "";
-                fieldsetDiv[j].className = "not-visible";
+                fieldsetDiv[j].className = "select-amount not-visible";
             }
         }
 

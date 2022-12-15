@@ -15,9 +15,26 @@ body {
 }
 
 /* Typography */
+
+h2 {
+    margin-top: 0;
+}
+
 a {
     text-decoration: none;
     color: hsl(0, 0%, 0%);
+}
+
+p {
+    line-height: 1.6;
+    color: hsl(0, 0%, 48%);
+}
+
+p span {
+    font-weight: 500;
+    color: hsl(0, 0%, 0%);
+    margin-right: .4em;
+    font-size: 1.7rem;
 }
 
 header {
@@ -84,16 +101,17 @@ header button {
 }
 
 .not-visible {
-    visibility: collapse;
-    height: 0;
+    /* visibility: collapse;
+    height: 0; */
+    display: none;
 }
 
 .selected {
-    border: 2px solid hsl(176, 72%, 28%);
+    border: 2px solid hsl(176, 50%, 47%);
 }
 
 .bold {
-    font-weight: bold;
+    font-weight: 500;
 }
 
 main {
@@ -136,7 +154,7 @@ main {
     bottom: 0;
     z-index: 999;
     display: none;
-    padding: 2em;
+    padding: 1.2em;
     height: 200vh;
 }
 
@@ -145,10 +163,77 @@ main {
 } */
 
 .selection-modal {
+    position: relative;
+    top: 5em;
     background-color: hsl(0, 0%, 100%);
-    padding: 2em;
+    padding: 2em 1em;
+    border-radius: 5px;
 }
 
 .bookmark {
     cursor: pointer;
+}
+
+/* pledge select */
+
+fieldset {
+    padding: 0;
+    margin-bottom: 1.5em;
+    border-radius: 5px;
+    border: 1px solid hsla(0, 1%, 40%, 0.233);
+}
+
+.pledge-info {
+    padding: 1.2em 1em .3em 1em;
+}
+
+.pledge-info div {
+    display: flex;
+    gap: .7em;
+    align-items: center;
+}
+
+.pledge-amount {
+    color: hsl(176, 50%, 47%);
+    margin-top: .5em;
+    display: block;
+}
+
+.pledge-info div+p {
+    margin-top: 1.6em;
+    margin-bottom: 1.4em;
+}
+
+.select-amount {
+    border-top: 1px solid hsla(0, 0%, 48%, 0.233);
+    padding: 1em;
+}
+
+/* form inputs */
+
+input[type="radio"] {
+    appearance: none;
+    font: inherit;
+    color: hsl(176, 50%, 47%);
+    width: 24px;
+    height: 24px;
+    border: 1px solid hsla(0, 0%, 48%, 0.233);
+    border-radius: 50%;
+    /* transform: translateY(1em); */
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em hsl(176, 50%, 47%);
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
 }
