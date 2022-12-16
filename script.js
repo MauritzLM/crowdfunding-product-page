@@ -75,6 +75,7 @@ for (let i = 0; i < radioButtons.length; i++) {
             }
             else {
                 fieldsets[j].className = "";
+                fieldsets[radioButtons.length - 1].className = "disabled";
                 fieldsetDiv[j].className = "select-amount not-visible";
             }
         }

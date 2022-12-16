@@ -166,7 +166,7 @@ main {
     background-color: hsl(0, 0%, 100%);
     padding: 2em 1em 0 1em;
     border-radius: 5px;
-    width: 330px;
+    width: 335px;
     height: max-content;
 }
 
@@ -290,4 +290,8 @@ button[type="submit"] {
     font-size: 1.4rem;
     letter-spacing: .1px;
     cursor: pointer;
+}
+
+.disabled {
+    opacity: .5;
 }
