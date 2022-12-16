@@ -89,7 +89,7 @@ const closeModalBtn = document.querySelector('.close-modal-btn');
 
 for (let button of selectRewardButtons) {
     button.addEventListener('click', (e) => {
-        selectionModal.style.display = 'block';
+        selectionModal.style.display = 'flex';
 
     });
 };

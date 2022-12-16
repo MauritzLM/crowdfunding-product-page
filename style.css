@@ -31,7 +31,7 @@ p {
 }
 
 p span {
-    font-weight: 500;
+    font-weight: 700;
     color: hsl(0, 0%, 0%);
     margin-right: .4em;
     font-size: 1.7rem;
@@ -111,7 +111,7 @@ header button {
 }
 
 .bold {
-    font-weight: 500;
+    font-weight: 700;
 }
 
 main {
@@ -156,18 +156,18 @@ main {
     display: none;
     padding: 1.2em;
     height: 200vh;
+    margin: 0 auto;
+    justify-content: center;
 }
-
-/* .success-modal-container {
-    display: block;
-} */
 
 .selection-modal {
     position: relative;
     top: 5em;
     background-color: hsl(0, 0%, 100%);
-    padding: 2em 1em;
+    padding: 2em 1em 0 1em;
     border-radius: 5px;
+    width: 330px;
+    height: max-content;
 }
 
 .bookmark {
@@ -197,6 +197,7 @@ fieldset {
     color: hsl(176, 50%, 47%);
     margin-top: .5em;
     display: block;
+    font-weight: 500;
 }
 
 .pledge-info div+p {
@@ -206,7 +207,28 @@ fieldset {
 
 .select-amount {
     border-top: 1px solid hsla(0, 0%, 48%, 0.233);
-    padding: 1em;
+    padding: 1.7em 1em 1.3em 1em;
+}
+
+.select-amount div {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.select-amount label {
+    color: hsl(0, 0%, 48%);
+    text-align: center;
+    display: block;
+    margin-bottom: 1.4em;
+}
+
+.select-amount span {
+    position: absolute;
+    left: 2.4em;
+    top: 1.1em;
+    color: hsl(0, 0%, 48%);
+    font-size: 1.4rem;
 }
 
 /* form inputs */
@@ -217,13 +239,14 @@ input {
 
 input[type="number"] {
     appearance: textfield;
-    padding: .7em .5em .7em .5em;
-    border-radius: 20px;
-    width: 32%;
+    padding: 1em .5em 1em .5em;
+    border-radius: 25px;
+    width: 38%;
     border: 1px solid hsla(0, 0%, 48%, 0.233);
     text-align: center;
     font: inherit;
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 1.4rem;
 }
 
 input[type="radio"] {
@@ -250,4 +273,21 @@ input[type="radio"]::before {
 
 input[type="radio"]:checked::before {
     transform: scale(1);
+}
+
+button[type="submit"] {
+    width: 48%;
+}
+
+.button {
+    border: none;
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    font: inherit;
+    padding: 1.1em 1.9em 1.1em 1.9em;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: .1px;
+    cursor: pointer;
 }
