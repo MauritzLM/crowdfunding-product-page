@@ -3,6 +3,9 @@ const menuIcon = document.querySelector(".menu-icon");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 const closeMenu = document.querySelector(".close-menu");
 const navModal = document.querySelector(".nav-modal");
+const projectInfoSection = document.querySelector(".project-info");
+
+
 
 // open menu
 menuIcon.addEventListener('click', () => {
@@ -10,6 +13,9 @@ menuIcon.addEventListener('click', () => {
     closeMenu.style.display = "block";
     menuIcon.style.display = "none";
     navModal.style.display = "block";
+
+    // change z-index of project info
+    projectInfoSection.style.zIndex = "0"
 });
 
 //close menu
@@ -18,6 +24,9 @@ closeMenu.addEventListener('click', () => {
     closeMenu.style.display = "none";
     menuIcon.style.display = "block";
     navModal.style.display = "none";
+
+    // change z-index of project info
+    projectInfoSection.style.zIndex = "1";
 });
 
 
