@@ -12,7 +12,7 @@ body {
     margin: 0;
     font-size: 1.5rem;
     height: 100%;
-    background-color: hsl(0, 14%, 95%);
+    background-color: hsl(0, 12%, 97%);
 }
 
 /* Typography */
@@ -24,7 +24,13 @@ h1 {
 h2 {
     margin-top: 0;
     margin-bottom: 1.2em;
+    font-size: 2rem;
+}
 
+h3 {
+    margin-top: .5em;
+    margin-bottom: .2em;
+    font-size: 1.6rem;
 }
 
 a {
@@ -33,7 +39,7 @@ a {
 }
 
 p {
-    line-height: 1.6;
+    line-height: 1.7;
     color: hsl(0, 0%, 48%);
 }
 
@@ -41,7 +47,36 @@ p span {
     font-weight: 700;
     color: hsl(0, 0%, 0%);
     margin-right: .4em;
+    font-size: 3rem;
+}
+
+.pledge-info p span {
     font-size: 1.7rem;
+}
+
+h3+p {
+    margin-top: .3em;
+    margin-bottom: 1.4em;
+    color: hsl(176, 50%, 47%);
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.button {
+    border: none;
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    font: inherit;
+    padding: 1.1em 1.9em 1.1em 1.9em;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: .1px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: hsl(176, 72%, 28%);
 }
 
 header {
@@ -78,6 +113,8 @@ header button {
     background: none;
     border: none;
     float: right;
+    position: relative;
+    top: .2em;
 }
 
 .dropdown-menu {
@@ -128,14 +165,14 @@ main {
     bottom: 4em;
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 1.7em;
 }
 
 .project-info,
 .progress,
 #about {
-    padding: 1em 1.2em 2em 1.2em;
-    /* box-shadow: 1px 1px hsl(0, 0%, 48%); */
+    padding: 1em 1.5em 2em 1.5em;
+    box-shadow: .5px .5px .5px hsla(0, 5%, 92%, 0.13);
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
 }
@@ -153,8 +190,8 @@ main {
 
 .logo {
     position: absolute;
-    top: -1.5em;
-    left: 8.5em;
+    top: -1.8em;
+    left: 42%;
 }
 
 .button-bookmark-container {
@@ -220,11 +257,61 @@ hr {
 
 .progress-bar {
     background-color: hsl(0, 7%, 86%);
-    width: 90%;
-    height: 15px;
+    width: 100%;
+    height: 12px;
     border-radius: 20px;
     margin-top: 2em;
 }
+
+/* about section */
+#about {
+    padding: 2.4em 1.5em;
+    font-size: 1.4rem;
+}
+
+#about section {
+    border: 1.5px solid hsla(0, 1%, 65%, 0.37);
+    border-radius: 10px;
+    padding: 1.2em 1.8em;
+    margin-top: 1.8em;
+}
+
+/* #about section:first-child {
+    margin-top: 2.5em;
+} */
+
+/* section[class="disabled"] {
+
+} */
+
+.amount-left {
+    margin-bottom: 1.6em;
+}
+
+.amount-left span {
+    position: relative;
+    top: .15em;
+}
+
+.select-pledge-btn,
+button[disabled] {
+    margin-bottom: .5em;
+    font-weight: 500;
+    padding-left: 2.4em;
+    padding-right: 2.4em;
+}
+
+button[disabled] {
+    background-color: hsl(0, 0%, 48%);
+
+}
+
+button[disabled]:hover {
+    background-color: hsl(0, 0%, 48%);
+}
+
+
+/* modal */
 
 .close-modal-btn {
     float: right;
@@ -390,20 +477,6 @@ button[type="submit"] {
     margin-top: 1em;
     margin-bottom: .5em;
     padding: 1.1em 2.2em;
-}
-
-
-.button {
-    border: none;
-    background-color: hsl(176, 50%, 47%);
-    color: white;
-    font: inherit;
-    padding: 1.1em 1.9em 1.1em 1.9em;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 1.4rem;
-    letter-spacing: .1px;
-    cursor: pointer;
 }
 
 .disabled {
