@@ -13,6 +13,11 @@ body {
     font-size: 1.5rem;
     height: 100%;
     background-color: hsl(0, 12%, 97%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 /* Typography */
@@ -84,6 +89,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
+    width: 100%;
     position: relative;
     padding: 0 1em;
     z-index: 1;
@@ -126,6 +132,7 @@ header button {
     padding-left: 0;
     border-radius: 10px;
     width: 95%;
+    display: none;
     /* height: 175px; */
 }
 
@@ -159,13 +166,15 @@ header button {
 }
 
 main {
-    padding: 0 1.6em;
+    /* padding: 0 1.6em; */
+    width: 327px;
     background-color: hsla(0, 0%, 100%, 0);
-    position: relative;
-    bottom: 4em;
+    position: absolute;
+    top: 25%;
     display: flex;
     flex-direction: column;
     gap: 1.7em;
+    z-index: 1;
 }
 
 .project-info,
@@ -201,14 +210,14 @@ main {
 }
 
 .project-info button {
-    flex: 65%;
-    padding: 1.2em 1.5em;
+
+    padding: 1.2em 3.1em;
     border-radius: 30px;
     font-size: 1.55rem;
 }
 
 .bookmark {
-    flex: 20%;
+
     cursor: pointer;
     text-align: right;
     /* float: right; */
@@ -409,6 +418,14 @@ fieldset {
     font-size: 1.4rem;
 }
 
+label {
+    cursor: pointer;
+}
+
+label[class="bold"]:hover {
+    color: hsl(176, 50%, 47%);
+}
+
 /* form inputs */
 
 input {
@@ -425,6 +442,10 @@ input[type="number"] {
     font: inherit;
     font-weight: 700;
     font-size: 1.4rem;
+}
+
+input[type="number"]:focus {
+    outline: 1px solid hsl(176, 50%, 47%);
 }
 
 input[type="radio"] {
@@ -482,4 +503,118 @@ button[type="submit"] {
 
 .disabled {
     opacity: .5;
+}
+
+/* Media Queries */
+@media screen and (min-width: 950px) {
+
+    header {
+        background-image: url(./images/image-hero-desktop.jpg);
+        /* background-size: cover; */
+        height: 400px;
+    }
+
+    /* .logo {
+        display: inline-block;
+        height: 20px;
+        width: 40px;
+        object-fit: contain; 
+} */
+
+    .nav-modal {
+        position: static;
+        /* right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0; */
+        width: auto;
+        height: auto;
+        /* background-color: hsla(0, 0%, 0%, 0.473); */
+        /* z-index: 1; */
+        display: block;
+    }
+
+    nav {
+        top: .6em;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav img {
+        object-fit: contain;
+        position: relative;
+        right: 6em;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        top: 0;
+        left: 9.7em;
+        display: flex;
+        background-color: inherit;
+        width: auto;
+        justify-content: flex-end;
+        color: hsl(0, 0%, 100%);
+    }
+
+    .dropdown-menu li a {
+        color: hsl(0, 0%, 100%);
+        font-weight: 400;
+    }
+
+    .dropdown-menu li:first-child,
+    .dropdown-menu li:nth-child(2) {
+        border: none;
+    }
+
+    main {
+        width: 730px;
+        top: 35%;
+    }
+
+    .logo {
+        left: 46%;
+    }
+
+    .button-bookmark-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.4em;
+        height: 56px;
+    }
+
+    .project-info,
+    .progress,
+    #about {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .bookmark {
+        width: max-content;
+        background-color: hsl(0, 17%, 95%);
+        border-radius: 30px;
+        /* height: 56px; */
+    }
+
+    .bookmark img {
+        color: hsl(0, 0%, 48%);
+    }
+
+    .bookmark span {
+        display: inline;
+        margin-left: .5em;
+        margin-right: 1.5em;
+        position: relative;
+        bottom: 1.5em;
+        color: hsl(0, 0%, 48%);
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+
 }

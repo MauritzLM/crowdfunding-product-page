@@ -3,30 +3,30 @@ const menuIcon = document.querySelector(".menu-icon");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 const closeMenu = document.querySelector(".close-menu");
 const navModal = document.querySelector(".nav-modal");
-const projectInfoSection = document.querySelector(".project-info");
+const main = document.querySelector("main");
 
 
 
 // open menu
 menuIcon.addEventListener('click', () => {
-    dropdownMenu.classList.toggle("not-visible");
+    dropdownMenu.style.display = "block";
     closeMenu.style.display = "block";
     menuIcon.style.display = "none";
     navModal.style.display = "block";
 
-    // change z-index of project info
-    projectInfoSection.style.zIndex = "0"
+    // change z-index of main
+    main.style.zIndex = "0"
 });
 
 //close menu
 closeMenu.addEventListener('click', () => {
-    dropdownMenu.classList.toggle("not-visible");
+    dropdownMenu.style.display = "none";
     closeMenu.style.display = "none";
     menuIcon.style.display = "block";
     navModal.style.display = "none";
 
-    // change z-index of project info
-    projectInfoSection.style.zIndex = "1";
+    // change z-index of main
+    main.style.zIndex = "1";
 });
 
 
@@ -41,11 +41,13 @@ bookmarkDiv.addEventListener('click', () => {
     if (bookmarkText.textContent === 'bookmark') {
         bookmarkText.textContent = 'bookmarked';
         // text color
+        bookmarkText.style.color = "hsl(176, 50%, 47%)";
         // img source ./images/icon-bookmark-checked.svg
         bookmarkIcon.src = './images/icon-bookmark-checked.svg';
     } else {
         bookmarkText.textContent = 'bookmark'
         // text color
+        bookmarkText.style.color = "hsl(0, 0%, 48%)";
         // img source ./images/icon-bookmark.svg
         bookmarkIcon.src = './images/icon-bookmark.svg';
     }
@@ -156,7 +158,6 @@ form.addEventListener('submit', (e) => {
             let newAmount = Number(numberInputs[i].value) + getNumber(currentAmount.textContent);
 
             // if target hit??
-            // if amount is 0
 
             // create correct format
             let newAmountStr = newAmount.toString();
