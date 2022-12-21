@@ -58,13 +58,18 @@ const fieldsets = document.querySelectorAll("fieldset");
 const fieldsetDiv = document.querySelectorAll(".select-amount");
 const pledgeAmount = document.querySelectorAll(".pledge-amount");
 
+
 for (let i = 0; i < radioButtons.length; i++) {
     // add event listener to all radio buttons
     radioButtons[i].addEventListener('click', (e) => {
         // loop through all radio buttons again to add/remove styles
         for (let j = 0; j < radioButtons.length; j++) {
+
             // if checked change styles
             if (radioButtons[j].checked) {
+                // set required on number input if radio button is checked
+                numberInputs[j].setAttribute("required", "");
+
                 fieldsets[j].className = "selected";
                 fieldsetDiv[j].className = "select-amount";
                 // toggle bold class on pledge amount info
@@ -83,6 +88,9 @@ for (let i = 0; i < radioButtons.length; i++) {
 
             }
             else {
+                // remove required if radio button not checked
+                numberInputs[j].removeAttribute("required");
+
                 fieldsets[j].className = "";
                 fieldsets[radioButtons.length - 1].className = "disabled";
                 fieldsetDiv[j].className = "select-amount not-visible";
@@ -100,7 +108,7 @@ const closeModalBtn = document.querySelector('.close-modal-btn');
 for (let button of selectRewardButtons) {
     button.addEventListener('click', (e) => {
         selectionModal.style.display = 'flex';
-
+        window.scrollTo(0, 0);
     });
 };
 
@@ -148,6 +156,7 @@ form.addEventListener('submit', (e) => {
             let newAmount = Number(numberInputs[i].value) + getNumber(currentAmount.textContent);
 
             // if target hit??
+            // if amount is 0
 
             // create correct format
             let newAmountStr = newAmount.toString();
@@ -160,10 +169,11 @@ form.addEventListener('submit', (e) => {
         }
     }
 
-    // display thank you modal
+    // display thank you modal  
 
     selectionModal.style.display = 'none';
     successModal.style.display = 'block';
+    window.scrollTo(0, 0);
     displayProgressBar();
     e.preventDefault();
 });
