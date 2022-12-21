@@ -17,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 2em;
 
 }
 
@@ -217,7 +218,6 @@ main {
 }
 
 .bookmark {
-
     cursor: pointer;
     text-align: right;
     /* float: right; */
@@ -246,11 +246,6 @@ hr {
     width: 30%;
     color: hsla(0, 0%, 99%, 0.651);
 }
-
-/* .progress div:first-child,
-.progress div:nth-child(2) {
-    border-bottom: 1px solid hsl(0, 0%, 48%);
-} */
 
 .progress div p:first-child {
     font-weight: 700;
@@ -284,14 +279,6 @@ hr {
     padding: 1.2em 1.8em;
     margin-top: 1.8em;
 }
-
-/* #about section:first-child {
-    margin-top: 2.5em;
-} */
-
-/* section[class="disabled"] {
-
-} */
 
 .amount-left {
     margin-bottom: 1.6em;
@@ -354,7 +341,6 @@ button[disabled]:hover {
     border-radius: 10px;
     width: 335px;
     height: max-content;
-
 }
 
 /* pledge select */
@@ -514,23 +500,10 @@ button[type="submit"] {
         height: 400px;
     }
 
-    /* .logo {
-        display: inline-block;
-        height: 20px;
-        width: 40px;
-        object-fit: contain; 
-} */
-
     .nav-modal {
         position: static;
-        /* right: 0;
-        top: 0;
-        left: 0;
-        bottom: 0; */
         width: auto;
         height: auto;
-        /* background-color: hsla(0, 0%, 0%, 0.473); */
-        /* z-index: 1; */
         display: block;
     }
 
@@ -583,7 +556,8 @@ button[type="submit"] {
     .button-bookmark-container {
         display: flex;
         justify-content: space-between;
-        margin-top: 1.4em;
+        margin-top: 2em;
+        margin-bottom: 1em;
         height: 56px;
     }
 
@@ -616,5 +590,57 @@ button[type="submit"] {
         text-transform: capitalize;
     }
 
+    .progress {
+        display: grid;
+        grid-template-areas:
+            "backed backers days"
+            "bar bar bar";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 3fr .1fr;
+        gap: 2em;
+        padding-bottom: 0;
+
+    }
+
+    .progress div {
+        margin: 0;
+        text-align: left;
+    }
+
+    .progress div p:first-child {
+        margin-top: 0;
+    }
+
+    .progress div P:last-child {
+        margin-bottom: 0;
+    }
+
+    .backed {
+        grid-area: backed;
+        border-right: 1px solid hsl(0, 2%, 74%);
+    }
+
+    .backers {
+        grid-area: backers;
+        border-right: 1px solid hsl(0, 2%, 74%);
+    }
+
+    .days {
+        grid-area: days;
+    }
+
+    .progress-bar {
+        grid-area: bar;
+        margin-top: 0;
+    }
+
+    hr {
+        visibility: collapse;
+    }
+
+    /* selection modal */
+    .selection-modal {
+        width: 730px;
+    }
 
 }
