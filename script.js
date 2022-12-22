@@ -173,7 +173,7 @@ form.addEventListener('submit', (e) => {
     // display thank you modal  
 
     selectionModal.style.display = 'none';
-    successModal.style.display = 'block';
+    successModal.style.display = 'flex';
     window.scrollTo(0, 0);
     displayProgressBar();
     e.preventDefault();
