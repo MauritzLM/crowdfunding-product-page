@@ -66,7 +66,7 @@ for (let i = 0; i < radioButtons.length; i++) {
     radioButtons[i].addEventListener('click', (e) => {
         // loop through all radio buttons again to add/remove styles
         for (let j = 0; j < radioButtons.length; j++) {
-
+            console.log(radioButtons[j].checked);
             // if checked change styles
             if (radioButtons[j].checked) {
                 // set required on number input if radio button is checked
@@ -174,7 +174,10 @@ form.addEventListener('submit', (e) => {
 
     selectionModal.style.display = 'none';
     successModal.style.display = 'flex';
+    // go to top of page
     window.scrollTo(0, 0);
+
+    // update progress bar
     displayProgressBar();
     e.preventDefault();
 });

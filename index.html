@@ -116,7 +116,7 @@
       <h2>Back this project</h2>
       <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
 
-      <form action="#" method="post">
+      <form action="/submit">
         <fieldset>
           <div class="pledge-info">
             <div>
@@ -133,7 +133,7 @@
             <div>
               <span>$</span>
               <input type="number" name="amount" id="0" value="0" min="1">
-              <button type="submit" class="button">Continue</button>
+              <button type="submit" class="button" value="no-reward" formaction="/no-reward">Continue</button>
             </div>
           </div>
         </fieldset>
@@ -159,7 +159,7 @@
             <div>
               <span>$</span>
               <input type="number" name="amount" id="25" value="25" min="25" max="74">
-              <button type="submit" class="button">Continue</button>
+              <button type="submit" class="button" value="bamboo" formaction="/bamboo">Continue</button>
             </div>
           </div>
           <!-- Selected pledge end -->
@@ -184,7 +184,7 @@
             <div>
               <span>$</span>
               <input type="number" name="amount" id="75" min="75" max="199" value="75">
-              <button type="submit" class="button">Continue</button>
+              <button type="submit" class="button" value="black-edition" formaction="/black-edition">Continue</button>
             </div>
           </div>
           <!-- Selected pledge end -->
@@ -211,7 +211,7 @@
             </label>
             <div>
               <input type="number" name="amount" id="200">
-              <button class="button">Continue</button>
+              <button class="button" value="mahogany" formaction="/mahogany">Continue</button>
             </div>
             <!-- Selected pledge end -->
         </fieldset>
