@@ -549,6 +549,12 @@ button[type="submit"] {
         border: none;
     }
 
+    h1 {
+        margin-top: .6em;
+        margin-bottom: .5em;
+        font-size: 2.6rem;
+    }
+
     main {
         width: 730px;
         top: 35%;
@@ -569,8 +575,8 @@ button[type="submit"] {
     .project-info,
     .progress,
     #about {
-        padding-left: 2em;
-        padding-right: 2em;
+        padding: 3em;
+
     }
 
     .bookmark {
@@ -624,21 +630,23 @@ button[type="submit"] {
 
     .backed {
         grid-area: backed;
-        border-right: 1px solid hsl(0, 2%, 74%);
+        border-right: 1px solid hsla(0, 2%, 74%, 0.349);
     }
 
     .backers {
         grid-area: backers;
-        border-right: 1px solid hsl(0, 2%, 74%);
+        border-right: 1px solid hsla(0, 2%, 74%, 0.349);
+        padding-left: 1.2em;
     }
 
     .days {
         grid-area: days;
+        padding-left: 1.4em;
     }
 
     .progress-bar {
         grid-area: bar;
-        margin-top: 0;
+        margin-top: .5em;
     }
 
     hr {
@@ -647,8 +655,13 @@ button[type="submit"] {
 
     /* about section */
 
+    #about {
+        font-size: 1.5rem;
+    }
+
     #about section {
         position: relative;
+        padding: 1.4em 2em;
     }
 
     h3 {
@@ -657,9 +670,13 @@ button[type="submit"] {
 
     h3+p {
         position: absolute;
-        right: 2em;
-        top: 1em;
+        right: 2.3em;
+        top: 1.2em;
     }
+
+    /* .about-pledge {
+        padding-right: 1em;
+    } */
 
     .select-pledge-btn {
         position: absolute;
