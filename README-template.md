@@ -14,9 +14,6 @@ This is a solution to the [Crowdfunding product page challenge on Frontend Mento
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -57,8 +54,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -101,6 +96,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 https://css-tricks.com/separate-form-submit-buttons-go-different-urls/ - having mulitple submit buttons
 
+https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp - remove arrows from number input
+
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
@@ -114,8 +111,3 @@ https://css-tricks.com/separate-form-submit-buttons-go-different-urls/ - having 
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

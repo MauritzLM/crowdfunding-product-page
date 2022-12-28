@@ -160,8 +160,6 @@ header button {
     border: 2px solid hsl(176, 50%, 47%);
 }
 
-
-
 main {
     /* padding: 0 1.6em; */
     width: 327px;
@@ -424,6 +422,12 @@ label[class="bold"]:hover {
 
 input {
     appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 input[type="number"] {
@@ -691,6 +695,10 @@ button[type="submit"] {
         top: 1.2em;
     }
 
+    .amount-left {
+        margin-bottom: 1em;
+    }
+
     .pledge-info {
         position: relative;
         padding-top: 1.8em;
@@ -740,7 +748,7 @@ button[type="submit"] {
     .select-pledge-btn {
         position: absolute;
         right: 2em;
-        bottom: 2em;
+        bottom: 1.6em;
     }
 
     .modal-container,
