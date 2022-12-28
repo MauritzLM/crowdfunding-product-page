@@ -160,9 +160,7 @@ header button {
     border: 2px solid hsl(176, 50%, 47%);
 }
 
-.bold {
-    font-weight: 700;
-}
+
 
 main {
     /* padding: 0 1.6em; */
@@ -217,10 +215,20 @@ main {
 }
 
 .bookmark {
+    /* width: 56px;
+    height: 56px; */
+    /* border-radius: 50%; */
     cursor: pointer;
     text-align: right;
+    /* background-image: url("./images/icon-bookmark.svg");
+    background-repeat: no-repeat; */
+    /* background-position: left; */
     /* float: right; */
 }
+
+/* .bookmark:hover {
+    background-image: url("");
+} */
 
 .bookmark span {
     display: none;
@@ -314,6 +322,7 @@ button[disabled]:hover {
     border: none;
     position: relative;
     top: .6em;
+    cursor: pointer;
 }
 
 .modal-container,
@@ -327,7 +336,7 @@ button[disabled]:hover {
     z-index: 999;
     display: none;
     padding: 1.2em;
-    height: 200vh;
+    height: 2650px;
     margin: 0 auto;
     justify-content: center;
 }
@@ -337,7 +346,7 @@ button[disabled]:hover {
     top: 5em;
     background-color: hsl(0, 0%, 100%);
     padding: 2em 1.25em 0 1.25em;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 335px;
     height: max-content;
 }
@@ -434,6 +443,10 @@ input[type="number"]:focus {
     outline: 1px solid hsl(176, 50%, 47%);
 }
 
+input[type="number"]:hover {
+    border-color: hsl(176, 50%, 47%);
+}
+
 input[type="radio"] {
     font: inherit;
     color: hsl(176, 50%, 47%);
@@ -490,6 +503,10 @@ button[type="submit"] {
 
 .disabled {
     opacity: .5;
+}
+
+.bold {
+    font-weight: 700;
 }
 
 /* Media Queries */
@@ -576,7 +593,6 @@ button[type="submit"] {
     .progress,
     #about {
         padding: 3em;
-
     }
 
     .bookmark {
@@ -584,6 +600,7 @@ button[type="submit"] {
         background-color: hsl(0, 17%, 95%);
         border-radius: 30px;
         /* height: 56px; */
+        /* text-align: left; */
     }
 
     .bookmark img {
@@ -592,9 +609,10 @@ button[type="submit"] {
 
     .bookmark span {
         display: inline;
-        margin-left: .5em;
-        margin-right: 1.5em;
+        /* margin-left: .5em; */
+        margin-right: 2.6em;
         position: relative;
+        left: 1em;
         bottom: 1.5em;
         color: hsl(0, 0%, 48%);
         font-weight: 700;
@@ -612,7 +630,6 @@ button[type="submit"] {
         grid-template-rows: 3fr .1fr;
         gap: 2em;
         padding-bottom: 0;
-
     }
 
     .progress div {
@@ -674,6 +691,48 @@ button[type="submit"] {
         top: 1.2em;
     }
 
+    .pledge-info {
+        position: relative;
+        padding-top: 1.8em;
+    }
+
+    .pledge-info div {
+        gap: 1em;
+    }
+
+    .pledge-info label {
+        display: flex;
+        gap: 1em;
+        /* align-items: center; */
+    }
+
+    .pledge-amount {
+        display: block;
+        margin: 0;
+    }
+
+    .pledge-info div+p {
+        padding-left: 3.1em;
+        margin-top: 1em;
+    }
+
+    .pledge-info p+p {
+        position: absolute;
+        top: 1.4em;
+        right: 1.7em;
+        font-size: 1.6rem;
+        margin: 0;
+    }
+
+    .select-amount {
+        padding-top: 1.3em;
+    }
+
+    .select-amount label {
+        position: relative;
+        left: .7em;
+    }
+
     /* .about-pledge {
         padding-right: 1em;
     } */
@@ -684,9 +743,21 @@ button[type="submit"] {
         bottom: 2em;
     }
 
+    .modal-container,
+    .success-modal-container {
+        height: 2000px;
+    }
+
     /* selection modal */
     .selection-modal {
         width: 730px;
+        padding: 2.5em 2.5em 1em 2.5em;
+        top: 8.5%;
+    }
+
+    .selection-modal h2 {
+        font-size: 2.5rem;
+        margin-bottom: .8em;
     }
 
     /* .select-amount {
@@ -704,8 +775,12 @@ button[type="submit"] {
     .select-amount div {
         width: 40%;
         position: relative;
-        left: 26em;
-        bottom: .8em;
+        left: 24.5em;
+        bottom: .6em;
+    }
+
+    .close-modal-btn {
+        top: 0;
     }
 
     .modal-thankyou {

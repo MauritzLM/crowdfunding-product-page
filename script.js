@@ -41,7 +41,7 @@ const getNumber = (str) => {
 //bookmark
 (function () {
     const bookmarkDiv = document.querySelector('.bookmark');
-    const bookmarkIcon = document.querySelector('.bookmark img');
+    const bookmarkImg = document.querySelector('.bookmark img');
     const bookmarkText = document.querySelector('.bookmark span');
 
     bookmarkDiv.addEventListener('click', () => {
@@ -51,13 +51,15 @@ const getNumber = (str) => {
             // text color
             bookmarkText.style.color = "hsl(176, 50%, 47%)";
             // img source ./images/icon-bookmark-checked.svg
-            bookmarkIcon.src = './images/icon-bookmark-checked.svg';
+            bookmarkImg.src = "./images/icon-bookmark-checked.svg";
+
         } else {
             bookmarkText.textContent = 'bookmark'
             // text color
             bookmarkText.style.color = "hsl(0, 0%, 48%)";
             // img source ./images/icon-bookmark.svg
-            bookmarkIcon.src = './images/icon-bookmark.svg';
+            bookmarkImg.src = "./images/icon-bookmark.svg";
+
         }
     });
 })();
@@ -76,7 +78,7 @@ const getNumber = (str) => {
         radioButtons[i].addEventListener('click', (e) => {
             // loop through all radio buttons again to add/remove styles
             for (let j = 0; j < radioButtons.length; j++) {
-                console.log(radioButtons[j].checked);
+
                 // if checked change styles
                 if (radioButtons[j].checked) {
                     // set required on number input if radio button is checked
