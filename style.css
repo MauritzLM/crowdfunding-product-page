@@ -25,7 +25,8 @@ h1 {
     margin-top: 2em;
 }
 
-h2 {
+h2,
+h4 {
     margin-top: 0;
     margin-bottom: 1.2em;
     font-size: 2rem;
@@ -493,7 +494,7 @@ button[type="submit"] {
     height: max-content;
 }
 
-.modal-thankyou h2 {
+.modal-thankyou h4 {
     font-size: 2rem;
     margin-top: 1em;
     /* margin-bottom: 1em; */
@@ -517,7 +518,7 @@ button[type="submit"] {
 @media screen and (min-width: 950px) {
 
     body {
-        height: 1900px;
+        height: 2000px;
     }
 
     header {
@@ -763,7 +764,7 @@ button[type="submit"] {
         top: 8.5%;
     }
 
-    .selection-modal h2 {
+    .selection-modal h4 {
         font-size: 2.5rem;
         margin-bottom: .8em;
     }
@@ -793,6 +794,13 @@ button[type="submit"] {
 
     .modal-thankyou {
         width: 500px;
+        padding: 2.2em 2.3em;
+        top: 22%;
+    }
+
+    .modal-thankyou h4 {
+        margin-top: 1.8em;
+        margin-bottom: 1em;
     }
 
 }
